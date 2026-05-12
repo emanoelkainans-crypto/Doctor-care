@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --brand-green: #00856f;
+    --brand-green-light: #dce9e2;
+    --brand-green-light-02: #f7f9f9;
+    --brand-beige: #fffaf1;
+    --brand-green-hover: #00453a;
+    --brand-headline: #061800;
+    --gray-paragraph: #384633;
+    --white: #ffffff;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+}
+
+header {
+    width: 100%;
+    height: 72px;
+    background-color: var(--brand-green-light);
+}
+
+.header-container {
+    width: 100%;
+    height: inherit;
+    padding: 0 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+}
+
+.header-container .logo span {
+    font-size:  2rem;
+    font-weight: 400;
+    color: var(--gray-headline);
+}
+
+.header-container .logo .care {
+    color: var(--brand-green);
+    font-weight: 600;
+}
+
+.header-container .menu,
+.agendar {
+    display: none;
+}
+
+.header-container .menu-sandwich {
+    background-color: var(--brand-green-light);
+    border: 0;
+}
+
+#home {
+    width: 100%;
+    height: auto;
+
+    background: var(--brand-green-light);
+}
+
+#home .home-container {
+    padding-top: 40px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+#home .home-container .home-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#home .header-container .home-left .welcome {
+    font-size: 0.875rem;
+    font-style: 700;
+    color: var(--brand-green);
+    text-align: center;
+}
+
+#home .home-container .home-left .title {
+    font-size: 2.125rem;
+    font-weight: 700;
+    line-height: 130%;
+    color: var(--gray-headline);
+    margin-top: 1rem;
+    text-align: center;
+}
+
+#home .home-container .home-left .description {
+    max-width: 350px;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 150%;
+    color: var(--text);
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+#home .home-container .home-left .schedule {
+    width: 263px;
+    height: 52px;
+    border-radius: 32px;
+    border: 0;
+    background-color: var(--brand-green);
+
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.875rem;
+
+    color: var(--white);
+    
+    margin-top: 2rem;
+}
+
+#home .home-container.home-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 24px;
+}
+
+@media (min-width:768px) {
+    .header-container{
+        max-width: 1600px;
+        margin:auto;
+    }
+
+    .header-container .menu,
+    .agendar {
+        display: flex;
+    }
+
+    .header-container .menu-sandwich {
+        display:none;
+    }
+
+    .header-container .menu ul {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+    }
+
+    .menu ul li {
+        position: relative;
+    }
+
+    .menu ul li a {
+        text-decoration: none;
+        font-size: 1rem;
+        color: var(--brand-green);
+    }
+
+    .menu ul li:first-child::after {
+        content:"";
+        width: 100%;
+        height: 2px;
+        background-color: var(--brand-green);
+        position: absolute;
+        left: 0;
+        bottom: -24px;
+    } 
+
+    .menu ul li:first-child a {
+        font-weight: 600;
+    }
+
+    .header-container .agendar {
+        width: auto;
+        height: 38px;
+        padding: 0% 16px;
+        border-radius: 1rem;
+        border: 1px solid var(--brand-green);
+        text-transform: uppercase;
+        color: var(--brand-green);
+        font-weight: 700;
+        background-color: var(--brand-green-light);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+    }
+}
+
+@media (min-width: 1080px) {
+    #home .home-container {
+        max-width: 1300px;
+        margin: 0 auto;
+        display: flex;
+        padding: 0;
+    }
+
+    #home .home-container .home-left,
+    .home-right {
+        width: 50%;
+    }
+
+    #home .home-container .home-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    #home .home-container .home-left .title {
+        font-size: 3.25rem;
+        text-align: left;
+    }
+
+    #home .home-container .home-left .description {
+        text-align: left;
+        max-width: 545px;
+    }
+}
